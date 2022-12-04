@@ -23,7 +23,7 @@ class Seeder extends Model
         return $query->where("batch", $number);
     }
 
-    public function scopeInReverseOrder(Builder $query): QueryBuilder
+    public function scopeInReverseOrder(Builder $query): QueryBuilder|Builder
     {
         return $query->orderBy("seeder", "desc");
     }
